@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FCD0A12-15E9-4DAA-9AF3-273525DC229E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Laundromat</RootNamespace>
+    <AssemblyName>Laundromat</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LaundromatCode\DryerMode.cs" />
+    <Compile Include="LaundromatCode\IronMode.cs" />
+    <Compile Include="LaundromatCode\Dryer.cs" />
+    <Compile Include="LaundromatCode\Drying.cs" />
+    <Compile Include="LaundromatCode\IDevice.cs" />
+    <Compile Include="LaundromatCode\IInputDevice.cs" />
+    <Compile Include="LaundromatCode\IPaymentDevice.cs" />
+    <Compile Include="LaundromatCode\Iron.cs" />
+    <Compile Include="LaundromatCode\Ironing.cs" />
+    <Compile Include="LaundromatCode\Laundromat.cs" />
+    <Compile Include="LaundromatCode\OperationMode.cs" />
+    <Compile Include="LaundromatCode\Payment.cs" />
+    <Compile Include="LaundromatCode\ProductSelling.cs" />
+    <Compile Include="LaundromatCode\Service.cs" />
+    <Compile Include="LaundromatCode\SystemController.cs" />
+    <Compile Include="LaundromatCode\TerminalProxy.cs" />
+    <Compile Include="LaundromatCode\Terminal.cs" />
+    <Compile Include="LaundromatCode\TouchScreen.cs" />
+    <Compile Include="LaundromatCode\VendingMachine.cs" />
+    <Compile Include="LaundromatCode\VendingMachineMode.cs" />
+    <Compile Include="LaundromatCode\Washer.cs" />
+    <Compile Include="LaundromatCode\Washing.cs" />
+    <Compile Include="LaundromatCode\WasherMode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
